@@ -1,0 +1,20 @@
+name: Task 5 - Simple Docker Command
+
+on:
+  push:
+    branches:
+      - main  # מפעיל את הפעולה בכל פעם שיש push לסניף main
+
+jobs:
+  docker-job:
+    runs-on: ubuntu-latest  # סביבת לינוקס עם Docker מותקן
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # שלב חובה כדי להביא את הקוד מהריפו
+
+      - name: Print Hello World
+        run: echo "Hello World"  # הדפסת הודעה פשוטה
+
+      - name: Check Docker version
+        run: docker -v  # בודק ש-Docker מותקן ומראה את גרסתו
