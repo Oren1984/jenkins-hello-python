@@ -1,19 +1,18 @@
-name: My First Action
+name: Docker Command Test
 
-on: push  # מתי להריץ - בכל פעם שמבצעים push לקוד
+on: push
 
 jobs:
-  my-job:
+  docker-test:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4  # מוריד את הקוד של הריפו הזה
-      - name: Print Hello World
-        run: echo "Hello, GitHub Actions!"
-      - name: List files with details
-        run: ls -la
-      - name: Run bash script to show date in Israel
-        run: bash ./show_date_israel.sh
-      - name: Run Python script to check palindrome
-        run: python3 ./check_palindrome.py
+        uses: actions/checkout@v4
+
+      - name: Run Hello World
+        run: echo "Hello World"
+
+      - name: Check Docker version
+        run: docker -v
 
