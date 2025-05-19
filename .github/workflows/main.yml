@@ -12,3 +12,6 @@ jobs:
         run: echo "Hello, GitHub Actions!"
       - name: List files with details
         run: ls -la
+      - name: Run bash script to show date in Israel
+        run: bash ./show_date_israel.sh
+
