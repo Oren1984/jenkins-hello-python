@@ -1,0 +1,10 @@
+def is_palindrome(number):
+    str_num = str(number)
+    return str_num == str_num[::-1]
+
+if __name__ == "__main__":
+    test_number = 12321  # תוכל לשנות את המספר לבדיקה
+    if is_palindrome(test_number):
+        print(f"{test_number} is a palindrome")
+    else:
+        print(f"{test_number} is not a palindrome")
