@@ -14,4 +14,6 @@ jobs:
         run: ls -la
       - name: Run bash script to show date in Israel
         run: bash ./show_date_israel.sh
+      - name: Run Python script to check palindrome
+        run: python3 ./check_palindrome.py
 
