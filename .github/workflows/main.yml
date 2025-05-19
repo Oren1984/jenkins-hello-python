@@ -1,0 +1,12 @@
+name: My First Action
+
+on: push  # מתי להריץ - בכל פעם שמבצעים push לקוד
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # מוריד את הקוד של הריפו הזה
+      - name: Print Hello World
+        run: echo "Hello, GitHub Actions!"
