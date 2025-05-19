@@ -1,0 +1,22 @@
+name: My First Action
+
+on: push
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print Hello World
+        run: echo "Hello, GitHub Actions!"
+
+      - name: List files with details
+        run: ls -la
+
+      - name: Run bash script to show date in Israel
+        run: bash ./show_date_israel.sh
+
+      - name: Run Python script to check palindrome
+        run: python3 ./check_palindrome.py
